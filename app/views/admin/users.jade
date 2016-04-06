@@ -1,0 +1,32 @@
+extends layout
+
+block header
+    include inc/admin-nav
+
+block content
+    
+    section
+        table.table.table-striped
+            thead
+                tr.panel.panel-default
+                    td Nom
+                    td Email
+                    td Status
+                    td Actions
+            tbody
+
+            each user in users
+                tr
+                    td
+                        a(href="/admin/users/#{user._id}")
+                            #{user.first_name} #{user.last_name}
+                    td
+                        p #{user.email}
+                    td
+                        p #{user.status}
+                    td
+                        div.btn-group
+                            
+                            a(href="/admin/users/#{user._id}" class="btn btn-primary") Edit
+                            a(href="/users/#{user._id}" class="btn btn-default") View
+                         

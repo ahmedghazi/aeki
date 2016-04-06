@@ -1,0 +1,35 @@
+extends ../layout
+
+prepend content
+    
+    section.submit
+  
+        form(name="submit", action="/api/user/", method="post")
+            
+            h3= title
+
+            div.row
+                input(type="text", class="form-control", name="first_name", placeholder="Prénom", value="")
+            
+            div.row
+                input(type="text", class="form-control", name="last_name" placeholder="Nom" value="")
+
+            div.row
+                input(type="email", class="form-control", name="email" placeholder="Email" value="")
+        
+
+            div.row
+                label(for="form-file") File input
+                input(type="file" class="form-control-file" id="form-file") 
+            div.row
+                div.checkbox
+                    label
+                        input(type="checkbox" value="cb") 
+                        | Checkbox
+            div.row
+                input(type="hidden" name="status" value="0")
+                input(type="submit", class="btn btn-lg btn-primary btn-block", value="Submit")
+
+
+                
+                

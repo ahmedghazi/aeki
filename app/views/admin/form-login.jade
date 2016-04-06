@@ -1,0 +1,23 @@
+extends ../layout
+
+prepend content
+    
+    section.submit
+        div.col-md-4
+            form(name="submit", action="/admin/login/", method="post")
+                
+                h3= title
+
+                div.row
+                    input(type="text", class="form-control", name="login", placeholder="Login", value="a@z.fr")
+                
+                div.row
+                    input(type="password", class="form-control", name="password" placeholder="Password" value="123")
+
+                div.row
+                    input(type="hidden" name="status" value="0")
+                    input(type="submit", class="btn btn-lg btn-primary btn-block", value="Submit")
+
+
+                
+                

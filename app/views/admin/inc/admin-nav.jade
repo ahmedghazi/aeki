@@ -1,0 +1,31 @@
+header
+    div.pull-left
+        h1 MONRESTÖ IKEA
+    div.pull-right 
+        p Salutations #{user.first_name} #{user.last_name}
+
+    div.clearfix
+
+    ul.nav.nav-pills.nav-justified
+        li
+            a(href="/admin/posts") Dates
+        li
+            a(href="/admin/users") Chefs
+        li
+            a(href="/admin/medias") Medias
+
+    hr
+
+    div.pull-left
+        h2= title
+
+        if posts
+            a(href="/admin/posts/new" class="btn btn-primary pull-left") Ajouter un Post
+        else
+            a(href="/admin/users/new" class="btn btn-primary pull-left") Ajouter un User    
+
+    div.clearfix
+    
+    hr
+
+    
